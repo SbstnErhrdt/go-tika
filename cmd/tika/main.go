@@ -26,7 +26,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/google/go-tika/tika"
+	"github.com/SbstnErhrdt/go-tika/tika"
 )
 
 func usage() {

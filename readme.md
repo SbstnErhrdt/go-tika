@@ -1,12 +1,12 @@
 # go-tika
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/google/go-tika.svg)](https://pkg.go.dev/github.com/google/go-tika)
+[![Go Reference](https://pkg.go.dev/badge/github.com/SbstnErhrdt/go-tika.svg)](https://pkg.go.dev/github.com/SbstnErhrdt/go-tika)
 
 go-tika is a Go client library and command line utility for accessing the [Apache Tika](http://tika.apache.org) Server API.
 
 go-tika requires Go version 1.8 or greater.
 
-See [the godoc](https://godoc.org/github.com/google/go-tika/tika) for more documentation on what resources are available.
+See [the godoc](https://godoc.org/github.com/SbstnErhrdt/go-tika/tika) for more documentation on what resources are available.
 
 ## Command line client
 
@@ -15,7 +15,7 @@ The `tika` binary allows you to access the Apache Tika Server API from the comma
 To get the binary, run:
 
 ```bash
-go get -u github.com/google/go-tika/cmd/tika
+go get -u github.com/SbstnErhrdt/go-tika/cmd/tika
 ```
 
 To download the Apache Tika 1.14 Server, check the MD5 sum, start the server in the background, and parse a file, run:

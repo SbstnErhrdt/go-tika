@@ -18,7 +18,7 @@ Package tika provides a client and server for downloading, starting, and using A
 
 Start with basic imports:
 
-	import "github.com/google/go-tika/tika"
+	import "github.com/SbstnErhrdt/go-tika/tika"
 
 You will need a running Server to make API calls to. So, if you don't
 have a server that is already running, and you don't have the Server
