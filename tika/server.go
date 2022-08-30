@@ -244,7 +244,7 @@ const (
 	Version119 Version = "1.19"
 	Version120 Version = "1.20"
 	Version121 Version = "1.21"
-	Version241 Version = "2.41"
+	Version241 Version = "2.4.1"
 )
 
 // Versions is a list of supported versions of Apache Tika.
