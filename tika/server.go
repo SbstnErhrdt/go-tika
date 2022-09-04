@@ -152,7 +152,9 @@ func (s *Server) Start(ctx context.Context) error {
 	}
 	s.cmd = cmd
 
-	if err := s.waitForStart(ctx); err != nil {
+	tCtx, cancel := context.WithTimeout(ctx, time.Second*30)
+	defer cancel()
+	if err := s.waitForStart(tCtx); err != nil {
 		out, readErr := cmd.CombinedOutput()
 		if readErr != nil {
 			return fmt.Errorf("error reading output: %v", readErr)
@@ -254,7 +256,7 @@ var sha512s = map[Version]string{
 	Version119: "a9e2b6186cdb9872466d3eda791d0e1cd059da923035940d4b51bb1adc4a356670fde46995725844a2dd500a09f3a5631d0ca5fbc2d61a59e8e0bd95c9dfa6c2",
 	Version120: "a7ef35317aba76be8606f9250893efece8b93384e835a18399da18a095b19a15af591e3997828d4ebd3023f21d5efad62a91918610c44e692cfd9bed01d68382",
 	Version121: "e705c836b2110530c8d363d05da27f65c4f6c9051b660cefdae0e5113c365dbabed2aa1e4171c8e52dbe4cbaa085e3d8a01a5a731e344942c519b85836da646c",
-	Version241: "bdeb793e068a7e109e87c0418e0efc41fd2394d0156725f855b427c419c8d23c378329f1169c0f58bf1ee36b2c980daca32f62e047dd7bc3959652b21bfe4fb7",
+	Version241: "91083a7d6f1ff711c32d516d8c6040280087a91508498555ade6105e930e15360965c273fbe10cd72807a18a384eb3e2daf1f9a37c24744d253bf520dae37d5a",
 }
 
 // DownloadServer downloads and validates the given server version,

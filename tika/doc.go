@@ -41,7 +41,7 @@ If you don't have a running Tika Server, you can start one.
 	if err != nil {
 		log.Fatal(err)
 	}
-	err := s.Start(context.Background())
+	err = s.Start(context.Background())
 	if err != nil {
 		log.Fatal(err)
 	}
