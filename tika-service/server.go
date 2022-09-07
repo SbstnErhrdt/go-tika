@@ -2,7 +2,8 @@ package tika_service
 
 import (
 	"context"
-	"github.com/google/go-tika/tika"
+	"fmt"
+	"github.com/SbstnErhrdt/go-tika/tika"
 	"log"
 	"os"
 )
@@ -37,7 +38,7 @@ func Start() {
 	det, err := client.Detectors(context.Background())
 	log.Println(det)
 
-	body, err := client.
-		fmt.Println(body)
+	body, err := client.Parse(context.Background(), f)
+	fmt.Println(body)
 
 }
